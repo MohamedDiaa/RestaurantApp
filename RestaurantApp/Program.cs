@@ -12,16 +12,26 @@ class PersonalRegister
     string name;
     string loan;
 
-    public void register()
-    {
 
+    public void requestName() {
         Console.WriteLine("Please, enter employee name");
-
         name = Console.ReadLine();
+    }
 
+    public void requestSalary()
+    {
         Console.WriteLine("Please, enter employee salary");
         loan = Console.ReadLine();
+    }
 
+    public void showResult()
+    {
         Console.WriteLine("name " + name + " " + "loan " + loan);
+    }
+
+    public void register() {
+        requestName();
+        requestSalary();
+        showResult();
     }
 }
